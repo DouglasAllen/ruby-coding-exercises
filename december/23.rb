@@ -1,6 +1,9 @@
+
+# https://www.crondose.com/?s=december+23
 require 'rspec'
 
 def random_numbers
+  Array.new(20) {rand 1000}
 end
 
 describe 'Random number collection generator' do
@@ -13,3 +16,5 @@ describe 'Random number collection generator' do
     expect(random_set_one).to_not eq(random_set_two)
   end
 end
+
+system 'rspec 24.rb' if __FILE__ == $PROGRAM_NAME
